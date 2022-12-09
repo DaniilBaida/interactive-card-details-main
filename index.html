@@ -26,6 +26,62 @@
         <div class="credit-card-owner-name">JANE APPLESEED</div>
         <div class="credit-card-exp-date">00/00</div>
       </div>
+      <div class="form-container">
+        <div class="form-item">
+          <h1>CARDHOLDER NAME</h1>
+          <input
+            type="text"
+            name="cardholder-name"
+            id="cardholder-name--form"
+            placeholder="e.g. Jane Appleseed"
+            maxlength="18"
+          />
+        </div>
+        <div class="form-item">
+          <h1>CARD NUMBER</h1>
+          <input
+            type="text"
+            name="card-number"
+            id="card-number-form"
+            placeholder="e.g. 1234 5678 9123 0000"
+            maxlength="16"
+          />
+        </div>
+        <div class="flex">
+          <div class="exp-date-container">
+            <div class="form-item">
+              <h1>EXP. DATE (MM/YY)</h1>
+              <div class="exp-date">
+                <input
+                  type="text"
+                  name="card-month"
+                  id="card-month-form"
+                  placeholder="MM"
+                  maxlength="2"
+                />
+                <input
+                  type="text"
+                  name="card-year"
+                  id="card-year-form"
+                  placeholder="YY"
+                  maxlength="2"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-item">
+            <h1>CVC</h1>
+            <input
+              type="text"
+              name="card-cvc"
+              id="card-cvc-form"
+              placeholder="e.g. 123"
+              maxlength="3"
+            />
+          </div>
+        </div>
+        <input type="button" value="Confirm" class="confirm-button" />
+      </div>
     </main>
   </body>
   <script src="./js/main.js"></script>

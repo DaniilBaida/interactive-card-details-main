@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightGray: hsl(270, 3%, 87%);
+  --darkGray: hsl(279, 6%, 55%);
+  --darkViolet: hsl(278, 68%, 11%);
+  --red: hsl(0, 100%, 66%);
+}
 
 * {
   margin: 0;
@@ -6,16 +14,22 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
+html {
+  width: 100%;
+  height: 100%;
 }
 
 main {
+  width: 100%;
   height: 100%;
   font-family: "Space Grotesk", sans-serif;
 }
 
 .credit-card--container {
+}
+
+.form-container h1 {
+  color: var(--darkViolet);
 }
 
 @media only screen and (max-width: 600px) {
@@ -44,7 +58,7 @@ main {
     position: absolute;
     bottom: 0;
 
-    transform: translate(10%, -26%);
+    transform: translate(10%, -26.5%);
   }
 
   .credit-card--front {
@@ -63,8 +77,9 @@ main {
 
     font-size: 12px;
     color: #fff;
+    letter-spacing: 1px;
 
-    transform: translate(13%, 3px);
+    transform: translate(14%, 2px);
 
     text-align: end;
   }
@@ -105,6 +120,7 @@ main {
 
     text-align: center;
     font-size: 18px;
+    font-weight: 400;
     letter-spacing: 2px;
 
     color: #fff;
@@ -119,7 +135,7 @@ main {
     width: 180px;
 
     text-align: start;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 2px;
 
     color: #fff;
@@ -134,11 +150,98 @@ main {
     width: 180px;
 
     text-align: start;
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 2px;
 
     color: #fff;
 
     transform: translate(145px, 140px);
+  }
+
+  .form-container {
+    width: 100%;
+    height: 420px;
+
+    min-width: 320px;
+    max-width: 320px;
+
+    margin: 100px auto 0 auto;
+  }
+
+  .form-container h1 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+  }
+
+  .form-item input {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    border: solid 1px var(--lightGray);
+    border-radius: 5px;
+
+    padding-left: 15px;
+  }
+
+  .form-item input::placeholder {
+    font-weight: 500;
+
+    font-size: 18px;
+
+    color: var(--darkGray);
+  }
+
+  .form-item input:focus {
+    outline: solid 2px var(--darkViolet);
+  }
+
+  .form-item {
+    margin-bottom: 20px;
+  }
+
+  .details-container {
+    display: flex;
+
+    gap: 10px;
+  }
+
+  .exp-date {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+  .exp-date input {
+    width: 100%;
+  }
+
+  .exp-date-container {
+    display: flex;
+
+    width: 80%;
+
+    margin-right: 10px;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .confirm-button {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+
+    border: none;
+    border-radius: 5px;
+    background-color: var(--darkViolet);
+
+    margin-top: 15px;
+    width: 100%;
+    height: 55px;
   }
 }
